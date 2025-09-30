@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ads Test Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center;">
+
+  <!-- ================== YOUTUBE EMBED ================== -->
+  <h2>Embedded YouTube Video</h2>
+  <div style="margin-bottom:20px;">
+    <iframe width="560" height="315" 
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+      frameborder="0" allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- ================== HILLTOPADS ================== -->
+  <h2>HilltopAds Banners (50)</h2>
+  <div id="hilltop-banner"></div>
+
+  <script>
+    // Contoh dummy: ganti dengan script unik HilltopAds
+    const hilltopBannerScripts = [];
+    for (let i = 1; i <= 50; i++) {
+      hilltopBannerScripts.push(
+        `<script>(function(){console.log("HilltopAds Banner #${i}");})();<\/script>`
+      );
+    }
+
+    const hilltopContainer = document.getElementById("hilltop-banner");
+    hilltopBannerScripts.forEach(code => {
+      hilltopContainer.insertAdjacentHTML("beforeend", code);
+    });
+  </script>
+
+  <h2>HilltopAds Popunder (1 script aktif)</h2>
+  <script>
+    (function(){
+      console.log("HilltopAds Popunder aktif");
+      // Ganti dengan script popunder asli dari dashboard
+    })();
+  </script>
+
+  <!-- ================== POPADS ================== -->
+  <h2>PopAds Script</h2>
+  <script type="text/javascript">
+    var _pop = _pop || [];
+    _pop.push(['siteId', 1234567]);   // ganti dengan Site ID asli
+    _pop.push(['minBid', 0]);
+    _pop.push(['popundersPerIP', 2]); // atur sesuai kebutuhan
+    _pop.push(['delayBetween', 60]);  // delay 60 detik
+    (function() {
+      var pa = document.createElement('script'); 
+      pa.type = 'text/javascript'; 
+      pa.async = true;
+      pa.src = '//c1.popads.net/pop.js';
+      var s = document.getElementsByTagName('script')[0]; 
+      s.parentNode.insertBefore(pa, s);
+    })();
+  </script>
+
+  <!-- ================== CLICKADILLA ================== -->
+  <h2>Clickadilla Banners (50)</h2>
+  <div id="click-banner"></div>
+
+  <script>
+    const clickBannerIds = [];
+    for (let i = 1; i <= 50; i++) {
+      clickBannerIds.push(368870 + i); // dummy ID
+    }
+    const clickContainer = document.getElementById("click-banner");
+    clickBannerIds.forEach(id => {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "https://js.wpadmngr.com/static/adManager.js";
+      script.setAttribute("data-admpid", id);
+      clickContainer.appendChild(script);
+    });
+  </script>
+
+  <h2>Clickadilla Popunder (10)</h2>
+  <div id="click-popunder"></div>
+  <script>
+    const clickPopIds = [];
+    for (let i = 1; i <= 10; i++) {
+      clickPopIds.push(400000 + i); // dummy ID
+    }
+    const popContainer = document.getElementById("click-popunder");
+    clickPopIds.forEach(id => {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "https://js.wpadmngr.com/static/adManager.js";
+      script.setAttribute("data-admpid", id);
+      popContainer.appendChild(script);
+    });
+  </script>
+
+  <h2>Clickadilla Video Ads (10)</h2>
+  <div id="click-video"></div>
+  <script>
+    const clickVideoIds = [];
+    for (let i = 1; i <= 10; i++) {
+      clickVideoIds.push(500000 + i); // dummy ID
+    }
+    const videoContainer = document.getElementById("click-video");
+    clickVideoIds.forEach(id => {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "https://js.wpadmngr.com/static/adManager.js";
+      script.setAttribute("data-admpid", id);
+      videoContainer.appendChild(script);
+    });
+  </script>
+
+  <!-- ================== NEXT BUTTON ================== -->
+  <div style="margin:30px;">
+    <a href="https://contoh-website-lain.com" 
+       style="display:inline-block; padding:10px 20px; 
+              background:#007bff; color:#fff; 
+              text-decoration:none; border-radius:5px;">
+      Next Website →
+    </a>
+  </div>
+
+</body>
+</html>
